@@ -1,4 +1,6 @@
-# Dashboard personalizado no Grafana
+{
+  "__comment": "Dashboard personalizado no Grafana",
+}
 
 {
   "annotations": {
