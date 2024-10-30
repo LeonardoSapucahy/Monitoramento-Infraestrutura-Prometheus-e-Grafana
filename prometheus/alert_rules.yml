@@ -1,0 +1,13 @@
+# Regras de alerta do Prometheus
+
+groups:
+  - name: example
+    rules:
+    - alert: HighMemoryUsage
+      expr: node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes < 0.2
+      for: 1m
+      labels:
+        severity: critical
+      annotations:
+        summary: "Alta utilização de memória"
+        description: "A utilização de memória no servidor {{ $labels.instance }} está acima de 80%."
